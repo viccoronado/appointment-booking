@@ -5,8 +5,8 @@ _Este proyecto tiene como finalidad oficiar como turnero para un consultorio odo
 
 ## Autoras ✒️
 
-* **Carla Moreno** - *Full Stack Web Developer* - [scarlamoreno](https://github.com/scarlamoreno)
-* **Victoria Coronado** - *Full Stack Web Developer* - [viccoronado](https://github.com/viccoronado)
+* **Carla Moreno** - *Frontend Developer* - [scarlamoreno](https://github.com/scarlamoreno)
+* **Victoria Coronado** - *Backend Developer* - [viccoronado](https://github.com/viccoronado)
 
 
 ---
