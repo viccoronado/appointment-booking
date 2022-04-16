@@ -16,7 +16,7 @@ function Graphics(props) {
     axios.get("/statics").then((r) => setValues(r.data));
     axios.get(`/semana/${fechaActual}`).then((r) => setSemana(r.data));
     axios.get(`/precio`).then((r) => setPrecio(r.data.precio));
-  }, []);
+  }, [fechaActual]);
 
   const mayor = () => {
     let may = values[0];

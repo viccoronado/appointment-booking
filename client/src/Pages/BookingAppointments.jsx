@@ -10,7 +10,6 @@ import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
 import Spinner from "../Components/Spinner";
 import Login from "../Components/Login";
-import MessagePromo from "../Components/MessagePromo";
 import MessageBooked from "../Components/MessageBooked";
 import Footer from "../Components/Footer";
 import { Button, Modal } from "react-bootstrap";
@@ -70,8 +69,7 @@ function FormReservas(props) {
     } else {
       props.getFreeHours(props.user.dia);
     }
-    props.getPrice();
-  }, [dateToShow, props.user]);
+  }, [dateToShow, initialDate, props, props.user]);
 
   const handleChange = (e) => {
     if (e.target.name === "telefono" || e.target.name === "nombre")
@@ -265,14 +263,6 @@ function FormReservas(props) {
                       )}
                     </select>
                   </div>
-                  {props.compararFecha(initialDate, props.user.diaPromo) && (
-                    <MessagePromo
-                      diaActual={props.user.dia}
-                      diaPromo={props.user.diaPromo}
-                      compararFecha={props.compararFecha}
-                      precio={props.price}
-                    />
-                  )}
                   <button disabled={registrado} className="boton" type="submit">
                     Reservar
                   </button>

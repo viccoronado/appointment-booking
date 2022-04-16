@@ -7,7 +7,7 @@ import {
   FIND_USER,
 } from "./types";
 
-export { contactMe, sendMessage } from "./wspActions";
+export { contactMe, sendMessage } from "./whatsAppActions";
 export { compareDate } from "./dates";
 
 export const getUser = (id) => {

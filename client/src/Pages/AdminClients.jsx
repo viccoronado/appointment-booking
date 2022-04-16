@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { KeyboardDatePicker } from "@material-ui/pickers";
-import { makeStyles, alpha } from "@material-ui/core/styles";
+import { makeStyles } from "@material-ui/core/styles";
 import axios from "axios";
 import { useSnackbar } from "notistack";
 import Slide from "@material-ui/core/Slide";
@@ -91,7 +91,7 @@ function AdminClients(props) {
     axios.get(`/getClients/${fechaActual}`).then((r) => setRegistrados(r.data));
     props.getWspMessage();
     axios.get(`/precio`).then((r) => setPrecio(r.data.precio));
-  }, [render, fechaActual]);
+  }, [render, fechaActual, props]);
 
   const subsription = async () => {
     const register = await navigator.serviceWorker.register("/worker.js", {
